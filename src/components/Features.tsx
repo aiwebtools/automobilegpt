@@ -1,6 +1,6 @@
 
 import { MouseEvent, useRef, useState } from "react";
-import { CheckCircle2, Search, ShoppingCart, FileText, Youtube } from "lucide-react";
+import { CheckCircle2, Search, ShoppingCart, FileText, Youtube, Car } from "lucide-react";
 import { AnimateOnScroll } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 
