@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -179,8 +180,17 @@
   }
   
   .card-3d {
-    @apply transition-all duration-500 hover:transform hover:translate-z-10 hover:rotate-y-12 hover:rotate-x-12 hover:shadow-xl;
+    @apply transition-all duration-500 hover:transform hover:scale-105 hover:rotate-y-12 hover:rotate-x-12 hover:shadow-xl;
     transform-style: preserve-3d;
+  }
+  
+  /* Custom 3D transforms */
+  .translate-z {
+    transform: translateZ(10px);
+  }
+  
+  .hover\:translate-z:hover {
+    transform: translateZ(10px);
   }
 }
 
