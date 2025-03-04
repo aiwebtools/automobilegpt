@@ -1,4 +1,3 @@
-
 import { Car, Instagram, Youtube, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -78,10 +77,7 @@ const Footer = () => {
             <h3 className="font-medium text-lg mb-4 text-foreground">Company</h3>
             <ul className="space-y-2.5">
               <FooterLink text="About Us" href={AIWEBTOOLS_URL} external={true} />
-              <FooterLink text="Testimonials" href="#" />
               <FooterLink text="Contact Us" href="#contact" />
-              <FooterLink text="FAQ" href="#how-it-works" />
-              <FooterLink text="Customer Support" href="#contact" />
             </ul>
           </div>
         </div>
