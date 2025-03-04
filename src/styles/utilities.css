@@ -1,0 +1,63 @@
+
+@layer utilities {
+  .glass {
+    @apply bg-black/20 backdrop-blur-lg border border-white/10 shadow-lg;
+  }
+  
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-md;
+  }
+  
+  .neon-border {
+    @apply border border-automotive-neon/50 shadow-[0_0_10px_rgba(0,255,187,0.5)];
+  }
+  
+  .neon-text {
+    @apply text-automotive-neon drop-shadow-[0_0_8px_rgba(0,255,187,0.8)];
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(10, 132, 255, 0.8);
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8 lg:px-16;
+  }
+
+  .animate-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .hidden-y {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .reveal-y {
+    animation: revealY 0.8s ease forwards;
+  }
+  
+  .hidden-x {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
+  .reveal-x {
+    animation: revealX 0.8s ease forwards;
+  }
+  
+  .scale-up {
+    transform-origin: bottom;
+    transform: scale(0.94);
+    opacity: 0;
+    animation: scaleUp 0.5s ease forwards;
+  }
+}
