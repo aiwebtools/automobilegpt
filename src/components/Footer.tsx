@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 // AutoGPT and Insurance GPT URLs
 const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
-const INSURANCE_GPT_URL = "https://chatgpt.com/g/g-ols85Scif-insurance-claims-gpt";
+const INSURANCE_GPT_URL = "https://insuranceclaimsgpt.lovable.app/";
 const AIWEBTOOLS_URL = "https://www.aiwebtools.ai";
 
 // Create a custom TikTok icon component
