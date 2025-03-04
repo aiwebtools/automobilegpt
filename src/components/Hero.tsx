@@ -1,5 +1,6 @@
+
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Car, Wrench, MapPin, Search, Sparkles, RotateCw } from "lucide-react";
+import { ArrowRight, Car, Wrench, MapPin, Search, Sparkles, RotateCw, WrenchScrewdriver, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -135,17 +136,24 @@ const Hero = () => {
                 />
                 
                 <FeatureCard 
-                  icon={<Wrench className="w-5 h-5 text-automotive-purple" />}
-                  title="Auto Parts"
-                  description="Get direct links to the most affordable car parts online."
+                  icon={<ShoppingCart className="w-5 h-5 text-automotive-blue" />}
+                  title="Find Car Parts"
+                  description="Search for high-quality parts at the best prices across multiple vendors."
                   delay={300}
+                />
+                
+                <FeatureCard 
+                  icon={<WrenchScrewdriver className="w-5 h-5 text-automotive-purple" />}
+                  title="DIY Repairs Guidance"
+                  description="Access step-by-step guides and video tutorials for car maintenance."
+                  delay={450}
                 />
                 
                 <FeatureCard 
                   icon={<MapPin className="w-5 h-5 text-automotive-red" />}
                   title="Local Dealerships"
                   description="Discover trusted dealerships in your area with the best deals."
-                  delay={450}
+                  delay={600}
                 />
               </div>
             </div>
