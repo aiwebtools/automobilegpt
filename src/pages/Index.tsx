@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -8,6 +7,7 @@ import Services from "@/components/Services";
 import VideoSection from "@/components/VideoSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollBubble from "@/components/ScrollBubble";
 
 const Index = () => {
   // Enable smooth scrolling behavior for anchor links
@@ -71,6 +71,11 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <ScrollBubble 
+        threshold={300} 
+        url="https://automobilegpt.ai" 
+        text="TRY AutoMobile GPT" 
+      />
     </div>
   );
 };
