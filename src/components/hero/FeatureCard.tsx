@@ -31,7 +31,7 @@ const FeatureCard = ({
       className={cn(
         "bg-black/30 backdrop-blur-md rounded-xl p-4 shadow-sm transition-all duration-500 transform border border-white/5",
         isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0",
-        isHovered ? "scale-105 shadow-lg border-automotive-blue/30" : ""
+        isHovered ? "shadow-lg border-automotive-blue/30" : ""
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

@@ -9,8 +9,7 @@ interface FeatureCardGridProps {
 const FeatureCardGrid = ({ mouseMoveTransform }: FeatureCardGridProps) => {
   return (
     <div 
-      className="glass-dark relative rounded-2xl overflow-hidden shadow-2xl card-3d"
-      style={{ transform: mouseMoveTransform(5) }}
+      className="glass-dark relative rounded-2xl overflow-hidden shadow-2xl"
     >
       <div className="absolute inset-0 bg-gradient-to-tr from-automotive-blue/20 to-transparent z-0" />
       

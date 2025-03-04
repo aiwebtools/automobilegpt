@@ -30,10 +30,9 @@ const Hero = () => {
     };
   }, []);
 
-  const calcTransform = (factor = 15) => {
-    const x = (mousePosition.x - 0.5) * factor;
-    const y = (mousePosition.y - 0.5) * factor;
-    return `perspective(1000px) rotateX(${-y}deg) rotateY(${x}deg)`;
+  // Function still exists but returns an empty transform
+  const calcTransform = () => {
+    return '';
   };
 
   return (
