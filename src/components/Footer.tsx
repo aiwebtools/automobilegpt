@@ -10,13 +10,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-50 pt-16 pb-8 px-4">
+    <footer className="bg-black/95 pt-16 pb-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <a href="#" className="flex items-center space-x-2 mb-5">
               <Car className="h-7 w-7 text-automotive-blue" />
-              <span className="font-semibold text-xl tracking-tight">Automobile GPT</span>
+              <span className="font-semibold text-xl tracking-tight text-foreground">Automobile GPT</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-xs">
               Your AI-powered automotive expert for finding car deals, parts, and repair estimates tailored to your location.
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-5">Services</h3>
+            <h3 className="font-semibold text-lg mb-5 text-foreground">Services</h3>
             <ul className="space-y-3">
               <FooterLink text="Car Buying Assistance" href={AUTO_GPT_URL} external={true} />
               <FooterLink text="Auto Parts Finder" href={AUTO_GPT_URL} external={true} />
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-5">Company</h3>
+            <h3 className="font-semibold text-lg mb-5 text-foreground">Company</h3>
             <ul className="space-y-3">
               <FooterLink text="About Us" href="#" />
               <FooterLink text="How It Works" href="#how-it-works" />
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-5">Support</h3>
+            <h3 className="font-semibold text-lg mb-5 text-foreground">Support</h3>
             <ul className="space-y-3">
               <FooterLink text="Contact Us" href="#contact" />
               <FooterLink text="FAQ" href="#" />
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
             © {currentYear} AI Web Tools LLC. All rights reserved.
           </p>
@@ -112,7 +112,7 @@ const SocialLink = ({ icon, href, label }: { icon: React.ReactNode; href: string
   <a 
     href={href} 
     aria-label={label}
-    className="bg-white p-2 rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition-all text-muted-foreground hover:text-automotive-blue"
+    className="bg-black/40 border border-white/5 p-2 rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition-all text-muted-foreground hover:text-automotive-blue"
   >
     {icon}
   </a>

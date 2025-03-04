@@ -45,14 +45,14 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-black/90">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block bg-automotive-blue/10 px-3 py-1 rounded-full mb-3">
+            <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
               <p className="text-automotive-blue text-sm font-medium">Get In Touch</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4 text-glow">
               Need Help With Your Car Decisions?
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -64,14 +64,14 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <AnimateOnScroll animation="slide-right">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-automotive-blue/10 p-3 rounded-full mr-4">
+                  <div className="bg-automotive-blue/20 p-3 rounded-full mr-4">
                     <Mail className="h-5 w-5 text-automotive-blue" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Email Us</h4>
+                    <h4 className="font-medium mb-1 text-foreground">Email Us</h4>
                     <p className="text-muted-foreground mb-1">For general inquiries:</p>
                     <a href="mailto:support@ai-webtools.com" className="text-automotive-blue hover:underline">
                       support@ai-webtools.com
@@ -80,11 +80,11 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-automotive-blue/10 p-3 rounded-full mr-4">
+                  <div className="bg-automotive-blue/20 p-3 rounded-full mr-4">
                     <Phone className="h-5 w-5 text-automotive-blue" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Call Us</h4>
+                    <h4 className="font-medium mb-1 text-foreground">Call Us</h4>
                     <p className="text-muted-foreground mb-1">Customer support:</p>
                     <a href="tel:(475)800-8096" className="text-automotive-blue hover:underline">
                       (475) 800-8096
@@ -92,8 +92,8 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gray-50 rounded-xl p-6 mt-8">
-                  <h4 className="font-semibold mb-3">Business Hours</h4>
+                <div className="glass-dark rounded-xl p-6 mt-8">
+                  <h4 className="font-semibold mb-3 text-foreground">Business Hours</h4>
                   <div className="space-y-2 text-muted-foreground">
                     <div className="flex justify-between">
                       <span>Monday - Friday:</span>
@@ -114,12 +114,12 @@ const Contact = () => {
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="slide-left">
-            <div className="glass rounded-xl p-6 md:p-8">
-              <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
+            <div className="glass-dark rounded-xl p-6 md:p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">Send Us a Message</h3>
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium mb-1 text-foreground">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <Input
@@ -128,12 +128,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="w-full"
+                      className="w-full bg-black/50 border-white/10"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium mb-1 text-foreground">
                       Email <span className="text-red-500">*</span>
                     </label>
                     <Input
@@ -143,14 +143,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Your email address"
-                      className="w-full"
+                      className="w-full bg-black/50 border-white/10"
                       required
                     />
                   </div>
                 </div>
                 
                 <div className="mb-4">
-                  <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1 text-foreground">
                     Subject
                   </label>
                   <Input
@@ -159,12 +159,12 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="What is this regarding?"
-                    className="w-full"
+                    className="w-full bg-black/50 border-white/10"
                   />
                 </div>
                 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-foreground">
                     Message <span className="text-red-500">*</span>
                   </label>
                   <Textarea
@@ -174,7 +174,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="How can we help you?"
                     rows={5}
-                    className="w-full"
+                    className="w-full bg-black/50 border-white/10"
                     required
                   />
                 </div>
