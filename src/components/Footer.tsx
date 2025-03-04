@@ -75,10 +75,17 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-4 text-foreground">Services</h3>
             <ul className="space-y-3.5">
-              <FooterLink text="Car Buying Assistance" href={AUTO_GPT_URL} external={true} />
-              <FooterLink text="Auto Parts Finder" href={AUTO_GPT_URL} external={true} />
-              <FooterLink text="Repair Estimates" href={AUTO_GPT_URL} external={true} />
-              <FooterLink text="Car Value Assessment" href={AUTO_GPT_URL} external={true} />
+              <li>
+                <a 
+                  href={AUTO_GPT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 bg-automotive-blue/90 hover:bg-automotive-blue text-white font-semibold py-2.5 px-4 rounded-md transition-colors"
+                >
+                  <Car className="h-4 w-4" />
+                  <span>Automobile GPT</span>
+                </a>
+              </li>
               <FooterLink text="Insurance Claims GPT" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1.5 inline" />} />
             </ul>
           </div>
