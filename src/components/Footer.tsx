@@ -81,7 +81,7 @@ const Footer = () => {
               <FooterLink text="Testimonials" href="#" />
               <FooterLink text="Contact Us" href="#contact" />
               <FooterLink text="FAQ" href="#how-it-works" />
-              <FooterLink text="Customer Support" href="#" />
+              <FooterLink text="Customer Support" href="#contact" />
             </ul>
           </div>
         </div>
