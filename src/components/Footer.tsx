@@ -56,9 +56,9 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-5 text-foreground">Support</h3>
             <ul className="space-y-3">
               <FooterLink text="Contact Us" href="#contact" />
-              <FooterLink text="FAQ" href="#" />
-              <FooterLink text="Privacy Policy" href="#" />
-              <FooterLink text="Terms of Service" href="#" />
+              <FooterLink text="FAQ" href="#how-it-works" />
+              <FooterLink text="Privacy Policy" href="https://openai.com/policies/privacy-policy/" external={true} />
+              <FooterLink text="Terms of Service" href="https://aiwebtools.ai/terms-of-services" external={true} />
               <FooterLink text="Customer Support" href="#" />
             </ul>
           </div>
@@ -69,10 +69,20 @@ const Footer = () => {
             © {currentYear} AI Web Tools LLC. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-automotive-blue transition-colors">
+            <a 
+              href="https://openai.com/policies/privacy-policy/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-automotive-blue transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-automotive-blue transition-colors">
+            <a 
+              href="https://aiwebtools.ai/terms-of-services" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-automotive-blue transition-colors"
+            >
               Terms of Service
             </a>
             <a href="#" className="text-sm text-muted-foreground hover:text-automotive-blue transition-colors">
