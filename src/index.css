@@ -180,8 +180,13 @@
   }
   
   .card-3d {
-    @apply transition-all duration-500 hover:transform hover:scale-105 hover:rotate-y-12 hover:rotate-x-12 hover:shadow-xl;
+    @apply transition-all duration-500;
     transform-style: preserve-3d;
+  }
+  
+  .card-3d:hover {
+    transform: scale(1.05) rotateY(12deg) rotateX(12deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
   
   /* Custom 3D transforms */
@@ -189,8 +194,29 @@
     transform: translateZ(10px);
   }
   
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+  
+  .rotate-x-12 {
+    transform: rotateX(12deg);
+  }
+  
   .hover\:translate-z:hover {
     transform: translateZ(10px);
+  }
+  
+  .hover\:rotate-y-12:hover {
+    transform: rotateY(12deg);
+  }
+  
+  .hover\:rotate-x-12:hover {
+    transform: rotateX(12deg);
+  }
+  
+  /* Combined 3D transforms for hover effects */
+  .hover\:transform-3d:hover {
+    transform: scale(1.05) rotateY(12deg) rotateX(12deg);
   }
 }
 
