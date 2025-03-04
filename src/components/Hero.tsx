@@ -1,6 +1,5 @@
-
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Car, Wrench, MapPin, Search, Sparkles, RotateCw, WrenchScrewdriver, ShoppingCart } from "lucide-react";
+import { ArrowRight, Car, Wrench, MapPin, Search, Sparkles, RotateCw, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -143,7 +142,7 @@ const Hero = () => {
                 />
                 
                 <FeatureCard 
-                  icon={<WrenchScrewdriver className="w-5 h-5 text-automotive-purple" />}
+                  icon={<Wrench className="w-5 h-5 text-automotive-purple" />}
                   title="DIY Repairs Guidance"
                   description="Access step-by-step guides and video tutorials for car maintenance."
                   delay={450}
