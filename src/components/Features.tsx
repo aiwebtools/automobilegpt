@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils";
 
 const Features = () => {
   return (
-    <section id="features" className="section-padding bg-white">
+    <section id="features" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block bg-automotive-blue/10 px-3 py-1 rounded-full mb-3">
-              <p className="text-automotive-blue text-sm font-medium">Why Choose Automobile GPT</p>
+            <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
+              <p className="text-automotive-blue font-medium">Why Choose Automobile GPT</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4 text-glow">
               Powerful Features for Every Car Need
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -85,7 +85,7 @@ const FeatureCard = ({
 }) => {
   return (
     <AnimateOnScroll animation="fade-in" delay={delay}>
-      <div className="bg-white p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 h-full">
+      <div className="glass p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all duration-300 h-full hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] card-3d">
         <div className="flex flex-col h-full">
           <div className={cn("w-12 h-12 rounded-full flex items-center justify-center mb-4", iconBg)}>
             {icon}
@@ -130,7 +130,7 @@ const PremiumFeatureCard = ({ delay = 0 }: { delay?: number }) => {
     <AnimateOnScroll animation="fade-in" delay={delay}>
       <div 
         ref={cardRef}
-        className="relative bg-gradient-to-br from-automotive-blue to-blue-600 p-6 rounded-xl shadow-lg h-full text-white overflow-hidden"
+        className="relative bg-gradient-to-br from-automotive-purple to-automotive-blue p-6 rounded-xl shadow-lg h-full text-white overflow-hidden neon-border"
         style={{ 
           transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
           transition: 'transform 0.2s ease-out'
@@ -146,7 +146,7 @@ const PremiumFeatureCard = ({ delay = 0 }: { delay?: number }) => {
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
               <Car className="h-6 w-6 text-white" />
             </div>
-            <div className="bg-white/20 backdrop-blur-sm px-3 py-0.5 rounded-full">
+            <div className="bg-black/30 backdrop-blur-sm px-3 py-0.5 rounded-full border border-white/20">
               <span className="text-sm font-medium">Premium</span>
             </div>
           </div>

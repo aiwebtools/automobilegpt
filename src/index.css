@@ -1,48 +1,47 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 220 14% 10%;
+    --background: 220 14% 6%;
     --foreground: 220 10% 98%;
 
-    --card: 220 14% 12%;
+    --card: 220 14% 8%;
     --card-foreground: 220 10% 98%;
 
-    --popover: 220 14% 10%;
+    --popover: 220 14% 6%;
     --popover-foreground: 220 10% 98%;
 
-    --primary: 210 100% 52%;
+    --primary: 210 100% 55%;
     --primary-foreground: 220 10% 98%;
 
-    --secondary: 220 14% 15%;
-    --secondary-foreground: 220 10% 90%;
+    --secondary: 220 14% 10%;
+    --secondary-foreground: 220 10% 98%;
 
-    --muted: 220 14% 16%;
-    --muted-foreground: 220 10% 70%;
+    --muted: 220 14% 12%;
+    --muted-foreground: 220 10% 80%;
 
-    --accent: 220 100% 50%;
+    --accent: 240 100% 60%;
     --accent-foreground: 220 10% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 220 10% 98%;
 
-    --border: 220 14% 20%;
-    --input: 220 14% 16%;
-    --ring: 210 100% 50%;
+    --border: 220 14% 14%;
+    --input: 220 14% 12%;
+    --ring: 210 100% 60%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 220 14% 12%;
-    --sidebar-foreground: 220 10% 80%;
-    --sidebar-primary: 220 100% 50%;
+    --sidebar-background: 220 14% 8%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 220 100% 55%;
     --sidebar-primary-foreground: 220 10% 98%;
-    --sidebar-accent: 220 14% 15%;
+    --sidebar-accent: 220 14% 10%;
     --sidebar-accent-foreground: 220 10% 98%;
-    --sidebar-border: 220 14% 20%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 220 14% 14%;
+    --sidebar-ring: 217.2 91.2% 65%;
   }
 
   * {
@@ -65,11 +64,11 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/10 shadow-sm;
+    @apply bg-black/20 backdrop-blur-lg border border-white/10 shadow-lg;
   }
   
   .glass-dark {
-    @apply bg-black/30 backdrop-blur-lg border border-white/10 shadow-md;
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-md;
   }
   
   .neon-border {
@@ -168,7 +167,7 @@
   }
   
   .interactive-btn {
-    @apply relative overflow-hidden transition-all duration-300 bg-gradient-to-r from-automotive-blue to-automotive-purple border border-white/10 rounded-lg px-6 py-3 hover:scale-105 hover:shadow-[0_0_20px_rgba(10,132,255,0.5)] active:scale-95;
+    @apply relative overflow-hidden transition-all duration-300 bg-gradient-to-r from-automotive-blue to-automotive-purple border border-white/10 rounded-lg px-6 py-3 hover:scale-105 hover:shadow-[0_0_20px_rgba(10,132,255,0.7)] active:scale-95;
   }
   
   .interactive-btn::before {
@@ -185,8 +184,8 @@
   }
   
   .card-3d:hover {
-    transform: scale(1.05) rotateY(12deg) rotateX(12deg);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05) rotateY(12deg) rotateX(8deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
   
   /* Custom 3D transforms */

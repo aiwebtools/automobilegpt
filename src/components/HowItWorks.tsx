@@ -35,14 +35,14 @@ const HowItWorks = () => {
   ];
   
   return (
-    <section id="how-it-works" className="section-padding bg-gray-50">
+    <section id="how-it-works" className="section-padding bg-black/50">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block bg-automotive-blue/10 px-3 py-1 rounded-full mb-3">
-              <p className="text-automotive-blue text-sm font-medium">Simple Process</p>
+            <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
+              <p className="text-automotive-blue font-medium">Simple Process</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4 text-glow">
               How Automobile GPT Works
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -54,7 +54,7 @@ const HowItWorks = () => {
         {/* Step Indicators - Desktop */}
         <div className="hidden md:flex justify-between max-w-4xl mx-auto mb-12 relative">
           {/* Progress bar */}
-          <div className="absolute top-5 left-0 h-0.5 bg-gray-200 w-full -z-10"></div>
+          <div className="absolute top-5 left-0 h-0.5 bg-gray-800 w-full -z-10"></div>
           <div 
             className="absolute top-5 left-0 h-0.5 bg-automotive-blue transition-all duration-500 -z-10"
             style={{ width: `${(activeStep + 1) * 50}%` }}
@@ -71,7 +71,7 @@ const HowItWorks = () => {
                   "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
                   index <= activeStep 
                     ? "bg-automotive-blue text-white" 
-                    : "bg-white text-muted-foreground border border-gray-200"
+                    : "bg-muted text-muted-foreground border border-border"
                 )}
               >
                 {index + 1}
@@ -101,8 +101,8 @@ const HowItWorks = () => {
                 className={cn(
                   "glass p-6 rounded-xl h-full transition-all duration-500",
                   index === activeStep 
-                    ? "border-automotive-blue shadow-lg scale-105 z-10" 
-                    : "border-transparent opacity-80"
+                    ? "border-automotive-blue shadow-lg shadow-automotive-blue/10 scale-105 z-10" 
+                    : "border-white/5 opacity-80"
                 )}
               >
                 <div className="md:hidden flex items-center mb-4">
@@ -111,7 +111,7 @@ const HowItWorks = () => {
                       "w-8 h-8 rounded-full flex items-center justify-center mr-3",
                       index <= activeStep 
                         ? "bg-automotive-blue text-white" 
-                        : "bg-white text-muted-foreground border border-gray-200"
+                        : "bg-muted text-muted-foreground border border-border"
                     )}
                   >
                     {index + 1}
@@ -120,8 +120,12 @@ const HowItWorks = () => {
                 </div>
                 
                 <div className="hidden md:block mb-6">
-                  <div className="bg-white/50 w-12 h-12 rounded-full flex items-center justify-center shadow-sm">
-                    {step.icon}
+                  <div className="bg-automotive-blue/10 w-12 h-12 rounded-full flex items-center justify-center shadow-sm">
+                    <div className={cn(
+                      index <= activeStep ? "text-automotive-blue" : "text-muted-foreground"
+                    )}>
+                      {step.icon}
+                    </div>
                   </div>
                   <h3 className="font-semibold text-lg mt-4 md:hidden">{step.title}</h3>
                 </div>
@@ -132,7 +136,7 @@ const HowItWorks = () => {
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 z-20">
                     <div className={cn(
-                      "bg-white rounded-full p-1 shadow-md transition-colors",
+                      "bg-muted rounded-full p-1 shadow-md transition-colors",
                       index < activeStep ? "text-automotive-blue" : "text-muted-foreground"
                     )}>
                       <ArrowRight className="h-4 w-4" />

@@ -4,6 +4,9 @@ import { AnimateOnScroll, HoverEffect } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+// AutoGPT URL
+const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
+
 const Services = () => {
   const services = [
     {
@@ -69,14 +72,14 @@ const Services = () => {
   ];
   
   return (
-    <section id="services" className="section-padding">
+    <section id="services" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block bg-automotive-blue/10 px-3 py-1 rounded-full mb-3">
-              <p className="text-automotive-blue text-sm font-medium">Our Services</p>
+            <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
+              <p className="text-automotive-blue font-medium">Our Services</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4 text-glow">
               Expert Auto Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -99,25 +102,28 @@ const Services = () => {
         </div>
         
         <AnimateOnScroll animation="fade-in" delay={500}>
-          <div className="glass mt-16 p-8 md:p-10 rounded-2xl max-w-5xl mx-auto">
+          <div className="glass-dark mt-16 p-8 md:p-10 rounded-2xl max-w-5xl mx-auto neon-border">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
-                <div className="inline-block bg-automotive-blue/10 px-3 py-1 rounded-full mb-3">
-                  <p className="text-automotive-blue text-sm font-medium">Get Started Today</p>
+                <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
+                  <p className="text-automotive-blue font-medium">Get Started Today</p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to find your car solution?</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-glow">Ready to find your car solution?</h3>
                 <p className="text-muted-foreground mb-6">
                   Try Automobile GPT now and experience the future of automotive assistance. Our AI will help you 
                   make smarter car decisions with accurate information and personalized recommendations.
                 </p>
-                <Button className="bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-8 py-6">
+                <Button 
+                  className="bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-8 py-6 interactive-btn"
+                  onClick={() => window.open(AUTO_GPT_URL, "_blank")}
+                >
                   Start Your Assessment
                 </Button>
               </div>
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <div className="relative">
-                  <div className="absolute -inset-4 rounded-full bg-blue-100 blur-xl opacity-30 animate-pulse" />
-                  <div className="relative bg-automotive-blue/10 w-full aspect-square rounded-full flex items-center justify-center">
+                  <div className="absolute -inset-4 rounded-full bg-automotive-blue/20 blur-xl opacity-40 animate-pulse" />
+                  <div className="relative bg-automotive-blue/20 w-full aspect-square rounded-full flex items-center justify-center">
                     <Car className="w-20 h-20 text-automotive-blue" />
                   </div>
                 </div>
@@ -135,39 +141,45 @@ const ServiceCard = ({ service }: { service: any }) => {
     switch (color) {
       case 'blue':
         return {
-          iconBg: 'bg-blue-50',
-          iconColor: 'text-automotive-blue',
-          borderHover: 'hover:border-automotive-blue/30'
+          iconBg: 'bg-blue-900/50',
+          iconColor: 'text-blue-400',
+          borderHover: 'hover:border-blue-500/30',
+          glowColor: 'shadow-blue-500/20'
         };
       case 'teal':
         return {
-          iconBg: 'bg-teal-50',
-          iconColor: 'text-teal-600',
-          borderHover: 'hover:border-teal-300'
+          iconBg: 'bg-teal-900/50',
+          iconColor: 'text-teal-400',
+          borderHover: 'hover:border-teal-500/30',
+          glowColor: 'shadow-teal-500/20'
         };
       case 'purple':
         return {
-          iconBg: 'bg-purple-50',
-          iconColor: 'text-purple-600',
-          borderHover: 'hover:border-purple-300'
+          iconBg: 'bg-purple-900/50',
+          iconColor: 'text-purple-400',
+          borderHover: 'hover:border-purple-500/30',
+          glowColor: 'shadow-purple-500/20'
         };
       case 'amber':
         return {
-          iconBg: 'bg-amber-50',
-          iconColor: 'text-amber-600',
-          borderHover: 'hover:border-amber-300'
+          iconBg: 'bg-amber-900/50',
+          iconColor: 'text-amber-400',
+          borderHover: 'hover:border-amber-500/30',
+          glowColor: 'shadow-amber-500/20'
         };
       case 'red':
         return {
-          iconBg: 'bg-red-50',
-          iconColor: 'text-red-500',
-          borderHover: 'hover:border-red-300'
+          iconBg: 'bg-red-900/50',
+          iconColor: 'text-red-400',
+          borderHover: 'hover:border-red-500/30',
+          glowColor: 'shadow-red-500/20'
         };
       default:
         return {
-          iconBg: 'bg-gray-50',
-          iconColor: 'text-gray-600',
-          borderHover: 'hover:border-gray-300'
+          iconBg: 'bg-gray-900/50',
+          iconColor: 'text-gray-400',
+          borderHover: 'hover:border-gray-500/30',
+          glowColor: 'shadow-gray-500/20'
         };
     }
   };
@@ -177,8 +189,9 @@ const ServiceCard = ({ service }: { service: any }) => {
   return (
     <HoverEffect>
       <div className={cn(
-        "bg-white border border-border rounded-xl p-6 h-full transition-all",
-        colorClasses.borderHover
+        "glass border-white/5 rounded-xl p-6 h-full transition-all card-3d",
+        colorClasses.borderHover,
+        colorClasses.glowColor
       )}>
         <div className={cn(
           "w-12 h-12 rounded-full flex items-center justify-center mb-4",
@@ -189,7 +202,7 @@ const ServiceCard = ({ service }: { service: any }) => {
           </div>
         </div>
         
-        <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+        <h3 className="text-xl font-semibold mb-2 text-foreground">{service.title}</h3>
         <p className="text-muted-foreground mb-4">{service.description}</p>
         
         <ul className="space-y-2 mt-4">
