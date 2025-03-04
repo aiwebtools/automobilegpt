@@ -11,6 +11,7 @@ const Navbar = () => {
   // AutoGPT and Insurance GPT URLs
   const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
   const INSURANCE_GPT_URL = "https://chatgpt.com/g/g-ols85Scif-insurance-claims-gpt";
+  const AIWEBTOOLS_URL = "https://aiwebtools.ai";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,23 +43,33 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a 
-          href="#" 
-          className="flex items-center space-x-2 transition-opacity hover:opacity-80"
-        >
-          <Car 
-            className={cn(
-              "h-8 w-8 transition-colors", 
-              isScrolled ? "text-automotive-neon animate-pulse" : "text-automotive-blue"
-            )} 
-          />
-          <span className={cn(
-            "font-semibold text-xl tracking-tight transition-colors",
-            isScrolled ? "text-foreground neon-text" : "text-foreground"
-          )}>
-            Automobile GPT
-          </span>
-        </a>
+        <div className="flex flex-col items-start">
+          <a 
+            href="#" 
+            className="flex items-center space-x-2 transition-opacity hover:opacity-80"
+          >
+            <Car 
+              className={cn(
+                "h-8 w-8 transition-colors", 
+                isScrolled ? "text-automotive-neon animate-pulse" : "text-automotive-blue"
+              )} 
+            />
+            <span className={cn(
+              "font-semibold text-xl tracking-tight transition-colors",
+              isScrolled ? "text-foreground neon-text" : "text-foreground"
+            )}>
+              Automobile GPT
+            </span>
+          </a>
+          <a 
+            href={AIWEBTOOLS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground hover:text-automotive-neon transition-colors ml-10 -mt-1"
+          >
+            Presented by AiWebTools.Ai
+          </a>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -122,6 +133,14 @@ const Navbar = () => {
         )}
       >
         <div className="flex flex-col space-y-4 p-6">
+          <a 
+            href={AIWEBTOOLS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground hover:text-automotive-neon transition-colors text-center pb-2 border-b border-white/10"
+          >
+            Presented by AiWebTools.Ai
+          </a>
           {navLinks.map((link) => (
             <a
               key={link.text}
