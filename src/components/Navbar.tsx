@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { text: "Features", href: "#features" },
+    { text: "More AI Tools", href: AIWEBTOOLS_URL, external: true },
     { text: "How It Works", href: "#how-it-works" },
     { text: "Services", href: "#services" },
     { text: "Contact", href: "#contact" },
@@ -78,6 +78,8 @@ const Navbar = () => {
               <a
                 key={link.text}
                 href={link.href}
+                target={link.external ? "_blank" : ""}
+                rel={link.external ? "noopener noreferrer" : ""}
                 className={cn(
                   "text-sm font-medium transition-all duration-300 hover:text-automotive-neon relative group",
                   isScrolled ? "text-foreground" : "text-foreground"
@@ -145,6 +147,8 @@ const Navbar = () => {
             <a
               key={link.text}
               href={link.href}
+              target={link.external ? "_blank" : ""}
+              rel={link.external ? "noopener noreferrer" : ""}
               className="text-foreground hover:text-automotive-neon py-2 text-center font-medium transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
