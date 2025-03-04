@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 
 // AutoGPT URL
 const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
+// Insurance GPT URL
+const INSURANCE_GPT_URL = "https://insuranceclaimsgpt.lovable.app/";
 
 const Services = () => {
   const services = [
@@ -71,7 +73,7 @@ const Services = () => {
         "Step-by-step instructions"
       ],
       color: "red",
-      url: AUTO_GPT_URL
+      url: INSURANCE_GPT_URL
     }
   ];
   
