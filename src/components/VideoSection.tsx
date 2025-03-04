@@ -19,7 +19,7 @@ const VideoSection = () => {
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
-              <p className="text-automotive-blue text-sm font-medium">Watch How It Works</p>
+              <p className="text-automotive-blue text-sm font-medium">Your Automobile Assistant For Life For Free</p>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4 text-glow">
               See Automobile GPT in Action
