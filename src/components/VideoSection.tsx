@@ -1,18 +1,57 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AnimateOnScroll } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 
 const VideoSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [hasBeenInView, setHasBeenInView] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const videoId = "2P3-fOXiyAo";
   
   useEffect(() => {
     setIsLoaded(true);
+    
+    // Check if section is in viewport on initial load
+    const checkInitialVisibility = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const isVisible = (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+        
+        if (isVisible) {
+          setHasBeenInView(true);
+        }
+      }
+    };
+    
+    checkInitialVisibility();
+    
+    // Set up intersection observer to detect when video comes into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setHasBeenInView(true);
+          observer.disconnect(); // Only need to trigger once
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      observer.disconnect();
+    };
   }, []);
   
   return (
-    <section className="section-padding bg-black/80 px-4 sm:px-6 md:px-8">
+    <section ref={sectionRef} className="section-padding bg-black/80 px-4 sm:px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
@@ -32,13 +71,15 @@ const VideoSection = () => {
           )}
         >
           <div className="aspect-video relative">
-            <iframe 
-              src={`https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&mute=0&hd=1&vq=hd1080`}
-              title="Automobile GPT Demo"
-              className="absolute inset-0 w-full h-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
+            {hasBeenInView && (
+              <iframe 
+                src={`https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&mute=1&playsinline=1&controls=1&hd=1&vq=hd1080`}
+                title="Automobile GPT Demo"
+                className="absolute inset-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            )}
           </div>
           
           <div className="bg-black/80 p-3 sm:p-4 border-t border-white/5">
