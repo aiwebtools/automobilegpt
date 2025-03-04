@@ -1,5 +1,5 @@
 
-import { Car, Instagram, Youtube, Shield, ExternalLink } from "lucide-react";
+import { Car, Heart, Instagram, Youtube, Shield, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -96,6 +96,19 @@ const Footer = () => {
             <ul className="space-y-3.5">
               <FooterLink text="About Us" href={AIWEBTOOLS_URL} external={true} />
               <FooterLink text="Contact Us" href="#contact" />
+              <li className="mt-6 text-sm text-muted-foreground flex items-center">
+                <span>Made with</span>
+                <Heart className="h-4 w-4 mx-1 text-automotive-red fill-automotive-red" />
+                <span>by</span>
+                <a 
+                  href={AIWEBTOOLS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="ml-1 text-automotive-blue hover:underline"
+                >
+                  AIWebTools.AI
+                </a>
+              </li>
             </ul>
           </div>
         </div>
