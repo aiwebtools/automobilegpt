@@ -66,14 +66,14 @@ const Footer = () => {
               <FooterLink text="Auto Parts Finder" href={AUTO_GPT_URL} external={true} />
               <FooterLink text="Repair Estimates" href={AUTO_GPT_URL} external={true} />
               <FooterLink text="Car Value Assessment" href={AUTO_GPT_URL} external={true} />
-              <FooterLink text="Insurance Claims" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1 inline" />} />
+              <FooterLink text="Insurance Claims GPT" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1 inline" />} />
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-lg mb-5 text-foreground">Company</h3>
             <ul className="space-y-3">
-              <FooterLink text="About Us" href="#" />
+              <FooterLink text="About Us" href="https://www.aiwebtools.ai" external={true} />
               <FooterLink text="How It Works" href="#how-it-works" />
               <FooterLink text="Testimonials" href="#" />
               <FooterLink text="Blog" href="#" />
