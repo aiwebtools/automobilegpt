@@ -1,4 +1,3 @@
-
 import { Car, Wrench, FileText, BarChart, AlertTriangle } from "lucide-react";
 import { AnimateOnScroll, HoverEffect } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,8 @@ const Services = () => {
         "Real URLs and addresses",
         "Feature-based recommendations"
       ],
-      color: "blue"
+      color: "blue",
+      url: AUTO_GPT_URL
     },
     {
       icon: <Wrench />,
@@ -31,7 +31,8 @@ const Services = () => {
         "Part compatibility checks",
         "Lowest price guarantee"
       ],
-      color: "teal"
+      color: "teal",
+      url: AUTO_GPT_URL
     },
     {
       icon: <FileText />,
@@ -43,7 +44,8 @@ const Services = () => {
         "Step-by-step repair guides",
         "Total cost calculations"
       ],
-      color: "purple"
+      color: "purple",
+      url: AUTO_GPT_URL
     },
     {
       icon: <BarChart />,
@@ -55,7 +57,8 @@ const Services = () => {
         "Value-to-repair ratio",
         "Professional recommendations"
       ],
-      color: "amber"
+      color: "amber",
+      url: AUTO_GPT_URL
     },
     {
       icon: <AlertTriangle />,
@@ -67,7 +70,8 @@ const Services = () => {
         "Insurance claim assistance",
         "Step-by-step instructions"
       ],
-      color: "red"
+      color: "red",
+      url: AUTO_GPT_URL
     }
   ];
   
@@ -188,11 +192,14 @@ const ServiceCard = ({ service }: { service: any }) => {
   
   return (
     <HoverEffect>
-      <div className={cn(
-        "glass border-white/5 rounded-xl p-6 h-full transition-all card-3d",
-        colorClasses.borderHover,
-        colorClasses.glowColor
-      )}>
+      <div 
+        className={cn(
+          "glass border-white/5 rounded-xl p-6 h-full transition-all card-3d cursor-pointer",
+          colorClasses.borderHover,
+          colorClasses.glowColor
+        )}
+        onClick={() => window.open(service.url, "_blank")}
+      >
         <div className={cn(
           "w-12 h-12 rounded-full flex items-center justify-center mb-4",
           colorClasses.iconBg
