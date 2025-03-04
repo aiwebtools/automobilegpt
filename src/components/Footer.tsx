@@ -1,5 +1,7 @@
-import { Car, Instagram, Youtube, Shield } from "lucide-react";
+
+import { Car, Instagram, Youtube, Shield, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 // AutoGPT and Insurance GPT URLs
 const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
@@ -41,7 +43,7 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6 max-w-xs text-sm">
               Your AI-powered automotive expert for finding car deals, parts, and repair estimates tailored to your location.
             </p>
-            <div className="flex space-x-3">
+            <div className="flex space-x-3 mb-6">
               <SocialLink 
                 icon={<Instagram className="h-5 w-5" />} 
                 href="https://www.instagram.com/aiwebtools.ai" 
@@ -58,12 +60,21 @@ const Footer = () => {
                 label="TikTok" 
               />
             </div>
+            <a 
+              href={AIWEBTOOLS_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center space-x-2 bg-automotive-blue/90 hover:bg-automotive-blue text-white font-semibold py-2.5 px-4 rounded-md transition-colors"
+            >
+              <span>More AI Tools</span>
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
           
           {/* Services column */}
           <div>
             <h3 className="font-medium text-lg mb-4 text-foreground">Services</h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3.5">
               <FooterLink text="Car Buying Assistance" href={AUTO_GPT_URL} external={true} />
               <FooterLink text="Auto Parts Finder" href={AUTO_GPT_URL} external={true} />
               <FooterLink text="Repair Estimates" href={AUTO_GPT_URL} external={true} />
@@ -75,7 +86,7 @@ const Footer = () => {
           {/* Support column */}
           <div>
             <h3 className="font-medium text-lg mb-4 text-foreground">Company</h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3.5">
               <FooterLink text="About Us" href={AIWEBTOOLS_URL} external={true} />
               <FooterLink text="Contact Us" href="#contact" />
             </ul>
@@ -92,7 +103,7 @@ const Footer = () => {
               href="https://openai.com/policies/privacy-policy/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-automotive-blue transition-colors"
+              className="text-muted-foreground hover:text-automotive-blue transition-colors font-medium"
             >
               Privacy Policy
             </a>
@@ -100,7 +111,7 @@ const Footer = () => {
               href="https://aiwebtools.ai/terms-of-services" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-automotive-blue transition-colors"
+              className="text-muted-foreground hover:text-automotive-blue transition-colors font-medium"
             >
               Terms of Service
             </a>
@@ -125,7 +136,7 @@ const FooterLink = ({
   <li>
     <a 
       href={href} 
-      className="text-muted-foreground hover:text-automotive-blue transition-colors flex items-center text-sm"
+      className="text-muted-foreground hover:text-automotive-blue transition-colors flex items-center text-sm font-semibold"
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {icon && icon}
