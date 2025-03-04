@@ -100,13 +100,13 @@ const Hero = () => {
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
-            <Button 
-              variant="outline" 
-              className="rounded-full px-8 py-6 text-lg border-automotive-neon/20 text-foreground hover:bg-automotive-neon/5 neon-border animate-pulse-neon"
+            <a 
+              href="#features"
+              className="rounded-full px-8 py-6 text-lg border-automotive-neon/20 text-foreground hover:bg-automotive-neon/5 neon-border animate-pulse-neon inline-flex items-center justify-center"
             >
               <RotateCw className="w-5 h-5 mr-2 animate-spin" style={{ animationDuration: '8s' }} />
               Learn More
-            </Button>
+            </a>
           </div>
         </div>
         
