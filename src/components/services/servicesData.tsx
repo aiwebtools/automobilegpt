@@ -1,5 +1,5 @@
 
-import { Car, Wrench, FileText, BarChart, AlertTriangle } from "lucide-react";
+import { Car, Wrench, FileText, BarChart, AlertTriangle, ClipboardCheck } from "lucide-react";
 import { ReactNode } from "react";
 
 // AutoGPT URL
@@ -12,7 +12,7 @@ export interface ServiceData {
   title: string;
   description: string;
   features: string[];
-  color: "blue" | "teal" | "purple" | "amber" | "red";
+  color: "blue" | "teal" | "purple" | "amber" | "red" | "green";
   url: string;
 }
 
@@ -80,6 +80,19 @@ export const servicesData: ServiceData[] = [
       "Step-by-step instructions"
     ],
     color: "red",
+    url: INSURANCE_GPT_URL
+  },
+  {
+    icon: <ClipboardCheck />,
+    title: "Insurance Claims GPT",
+    description: "Process your insurance claims faster with AI-powered assistance and documentation.",
+    features: [
+      "Claim form guidance",
+      "Documentation checklists",
+      "Settlement estimates",
+      "Fast approval process"
+    ],
+    color: "green",
     url: INSURANCE_GPT_URL
   }
 ];

@@ -8,7 +8,7 @@ export interface ServiceFeature {
   title: string;
   description: string;
   features: string[];
-  color: "blue" | "teal" | "purple" | "amber" | "red";
+  color: "blue" | "teal" | "purple" | "amber" | "red" | "green";
   url: string;
 }
 
@@ -49,6 +49,13 @@ export const ServiceCard = ({ service }: { service: ServiceFeature }) => {
           iconColor: 'text-red-400',
           borderHover: 'hover:border-red-500/30',
           glowColor: 'shadow-red-500/20'
+        };
+      case 'green':
+        return {
+          iconBg: 'bg-green-900/50',
+          iconColor: 'text-green-400',
+          borderHover: 'hover:border-green-500/30',
+          glowColor: 'shadow-green-500/20'
         };
       default:
         return {
