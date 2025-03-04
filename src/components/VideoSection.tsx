@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const videoId = "2P3-fOXiyAo";
   
   useEffect(() => {
     setIsLoaded(true);
@@ -36,59 +37,64 @@ const VideoSection = () => {
           )}
         >
           <div className="aspect-video relative group">
-            {/* Video Placeholder - In a real implementation, this would be a YouTube embed */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-900/50 flex items-center justify-center">
-              <div className="text-center text-white">
-                <Youtube className="h-12 w-12 mx-auto mb-4 text-red-500" />
-                <h3 className="text-2xl font-bold mb-2">Automobile GPT Demo</h3>
-                <p className="text-gray-300 mb-6 max-w-md mx-auto">
-                  See how to use our AI to find the best car deals, parts, and repair estimates
-                </p>
-                
-                <button 
-                  className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-full font-medium inline-flex items-center transition-all"
-                  onClick={() => setIsPlaying(!isPlaying)}
-                >
-                  {isPlaying ? (
-                    <>
-                      <Pause className="h-5 w-5 mr-2" />
-                      Pause Video
-                    </>
-                  ) : (
-                    <>
+            {isPlaying ? (
+              <iframe 
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                title="Automobile GPT Demo"
+                className="absolute inset-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <>
+                {/* Video Placeholder with thumbnail */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-900/50 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <Youtube className="h-12 w-12 mx-auto mb-4 text-red-500" />
+                    <h3 className="text-2xl font-bold mb-2">Automobile GPT Demo</h3>
+                    <p className="text-gray-300 mb-6 max-w-md mx-auto">
+                      See how to use our AI to find the best car deals, parts, and repair estimates
+                    </p>
+                    
+                    <button 
+                      className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-full font-medium inline-flex items-center transition-all"
+                      onClick={() => setIsPlaying(true)}
+                    >
                       <Play className="h-5 w-5 mr-2" />
                       Watch Demo
-                    </>
-                  )}
-                </button>
-              </div>
-            </div>
-            
-            {/* Video overlay with thumbnail (would be actual video in real implementation) */}
-            <div className={cn(
-              "absolute inset-0 bg-gray-800 transition-opacity duration-500",
-              isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
-            )}>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              
-              <div className="absolute bottom-8 left-8">
-                <div className="flex items-center space-x-3 text-white">
-                  <div className="bg-red-600 p-1 rounded">
-                    <Youtube className="h-5 w-5" />
+                    </button>
                   </div>
-                  <span className="font-medium">AutomobileGPT Official</span>
                 </div>
-              </div>
-              
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button 
-                  className="bg-red-600 hover:bg-red-700 w-16 h-16 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-                  onClick={() => setIsPlaying(true)}
-                >
-                  <Play className="h-6 w-6 text-white ml-1" />
-                </button>
-              </div>
-            </div>
+                
+                {/* Video thumbnail */}
+                <div className="absolute inset-0 bg-gray-800">
+                  <img 
+                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
+                    alt="Video thumbnail" 
+                    className="w-full h-full object-cover opacity-50"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  
+                  <div className="absolute bottom-8 left-8">
+                    <div className="flex items-center space-x-3 text-white">
+                      <div className="bg-red-600 p-1 rounded">
+                        <Youtube className="h-5 w-5" />
+                      </div>
+                      <span className="font-medium">AutomobileGPT Official</span>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <button 
+                      className="bg-red-600 hover:bg-red-700 w-16 h-16 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                      onClick={() => setIsPlaying(true)}
+                    >
+                      <Play className="h-6 w-6 text-white ml-1" />
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
           
           <div className="bg-white p-4 border-t border-gray-100">
