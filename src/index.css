@@ -1,47 +1,46 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 14% 10%;
+    --foreground: 220 10% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 14% 12%;
+    --card-foreground: 220 10% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 14% 10%;
+    --popover-foreground: 220 10% 98%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 100% 52%;
+    --primary-foreground: 220 10% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 14% 15%;
+    --secondary-foreground: 220 10% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 16%;
+    --muted-foreground: 220 10% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 100% 50%;
+    --accent-foreground: 220 10% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 220 10% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
+    --border: 220 14% 20%;
+    --input: 220 14% 16%;
+    --ring: 210 100% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-background: 220 14% 12%;
+    --sidebar-foreground: 220 10% 80%;
+    --sidebar-primary: 220 100% 50%;
+    --sidebar-primary-foreground: 220 10% 98%;
+    --sidebar-accent: 220 14% 15%;
+    --sidebar-accent-foreground: 220 10% 98%;
+    --sidebar-border: 220 14% 20%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -65,11 +64,19 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/60 backdrop-blur-lg border border-white/20 shadow-sm;
+    @apply bg-white/10 backdrop-blur-lg border border-white/10 shadow-sm;
   }
   
   .glass-dark {
-    @apply bg-foreground/5 backdrop-blur-lg border border-white/10 shadow-sm;
+    @apply bg-black/30 backdrop-blur-lg border border-white/10 shadow-md;
+  }
+  
+  .neon-border {
+    @apply border border-automotive-neon/50 shadow-[0_0_10px_rgba(0,255,187,0.5)];
+  }
+  
+  .neon-text {
+    @apply text-automotive-neon drop-shadow-[0_0_8px_rgba(0,255,187,0.8)];
   }
   
   .text-balance {
@@ -77,13 +84,17 @@
   }
   
   .text-shadow {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(10, 132, 255, 0.8);
   }
   
   .section-padding {
     @apply py-16 md:py-24 px-4 md:px-8 lg:px-16;
   }
-  
+
   .animate-in {
     animation: fadeIn 0.5s ease forwards;
   }
@@ -154,6 +165,23 @@
       opacity: 1;
     }
   }
+  
+  .interactive-btn {
+    @apply relative overflow-hidden transition-all duration-300 bg-gradient-to-r from-automotive-blue to-automotive-purple border border-white/10 rounded-lg px-6 py-3 hover:scale-105 hover:shadow-[0_0_20px_rgba(10,132,255,0.5)] active:scale-95;
+  }
+  
+  .interactive-btn::before {
+    @apply content-[""] absolute top-0 left-0 w-full h-full bg-white/10 -translate-x-full skew-x-12 transition-transform duration-700;
+  }
+  
+  .interactive-btn:hover::before {
+    @apply translate-x-full;
+  }
+  
+  .card-3d {
+    @apply transition-all duration-500 hover:transform hover:translate-z-10 hover:rotate-y-12 hover:rotate-x-12 hover:shadow-xl;
+    transform-style: preserve-3d;
+  }
 }
 
 /* Custom transition classes */
@@ -173,4 +201,23 @@
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+
+/* Scene background styling */
+.scene-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+}
+
+.floating-object {
+  position: absolute;
+  opacity: 0.15;
+  pointer-events: none;
+  will-change: transform;
 }

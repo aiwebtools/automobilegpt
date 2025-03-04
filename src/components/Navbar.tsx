@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Car, Menu, X } from "lucide-react";
+import { Car, Menu, X, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-8 py-4",
         isScrolled
-          ? "bg-white/80 backdrop-blur-lg shadow-sm"
+          ? "bg-background/80 backdrop-blur-lg shadow-md border-b border-white/5"
           : "bg-transparent"
       )}
     >
@@ -45,12 +45,12 @@ const Navbar = () => {
           <Car 
             className={cn(
               "h-8 w-8 transition-colors", 
-              isScrolled ? "text-automotive-blue" : "text-automotive-blue"
+              isScrolled ? "text-automotive-neon animate-pulse" : "text-automotive-blue"
             )} 
           />
           <span className={cn(
             "font-semibold text-xl tracking-tight transition-colors",
-            isScrolled ? "text-foreground" : "text-foreground"
+            isScrolled ? "text-foreground neon-text" : "text-foreground"
           )}>
             Automobile GPT
           </span>
@@ -64,17 +64,19 @@ const Navbar = () => {
                 key={link.text}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-automotive-blue",
+                  "text-sm font-medium transition-all duration-300 hover:text-automotive-neon relative group",
                   isScrolled ? "text-foreground" : "text-foreground"
                 )}
               >
                 {link.text}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-automotive-neon transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
           <Button 
-            className="bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-6"
+            className="interactive-btn bg-gradient-to-r from-automotive-blue to-automotive-purple text-white rounded-full px-6 group"
           >
+            <Sparkles className="w-4 h-4 mr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             Get Started
           </Button>
         </div>
@@ -95,7 +97,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div 
         className={cn(
-          "fixed inset-x-0 top-[65px] bg-white/95 backdrop-blur-lg shadow-lg md:hidden transition-all duration-300 ease-in-out",
+          "fixed inset-x-0 top-[65px] bg-background/95 backdrop-blur-lg shadow-lg md:hidden transition-all duration-300 ease-in-out border-b border-white/5",
           mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         )}
       >
@@ -104,15 +106,16 @@ const Navbar = () => {
             <a
               key={link.text}
               href={link.href}
-              className="text-foreground hover:text-automotive-blue py-2 text-center font-medium"
+              className="text-foreground hover:text-automotive-neon py-2 text-center font-medium transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.text}
             </a>
           ))}
           <Button 
-            className="mt-2 bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full"
+            className="mt-2 bg-gradient-to-r from-automotive-blue to-automotive-purple hover:from-automotive-purple hover:to-automotive-blue text-white rounded-full transition-all duration-500"
           >
+            <Sparkles className="w-4 h-4 mr-1" />
             Get Started
           </Button>
         </div>
