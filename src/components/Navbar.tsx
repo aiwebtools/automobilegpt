@@ -86,7 +86,7 @@ const Navbar = () => {
               )}
             >
               <Shield className="w-4 h-4 mr-1" />
-              Insurance Claims
+              Try Insurance Claims GPT
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-automotive-neon transition-all duration-300 group-hover:w-full" />
             </a>
           </div>
@@ -140,7 +140,7 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             <Shield className="w-4 h-4 mr-1" />
-            Insurance Claims
+            Try Insurance Claims GPT
           </a>
           <a
             href={AUTO_GPT_URL}
