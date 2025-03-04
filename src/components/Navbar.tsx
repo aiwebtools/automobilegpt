@@ -1,12 +1,16 @@
 
 import { useState, useEffect } from "react";
-import { Car, Menu, X, Sparkles } from "lucide-react";
+import { Car, Menu, X, Sparkles, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // AutoGPT and Insurance GPT URLs
+  const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
+  const INSURANCE_GPT_URL = "https://chatgpt.com/g/g-ols85Scif-insurance-claims-gpt";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,13 +76,29 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-automotive-neon transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
+            <a 
+              href={INSURANCE_GPT_URL}
+              target="_blank"
+              rel="noopener noreferrer" 
+              className={cn(
+                "text-sm font-medium transition-all duration-300 hover:text-automotive-neon relative group flex items-center",
+                isScrolled ? "text-foreground" : "text-foreground"
+              )}
+            >
+              <Shield className="w-4 h-4 mr-1" />
+              Insurance Claims
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-automotive-neon transition-all duration-300 group-hover:w-full" />
+            </a>
           </div>
-          <Button 
+          <a 
+            href={AUTO_GPT_URL} 
+            target="_blank"
+            rel="noopener noreferrer"
             className="interactive-btn bg-gradient-to-r from-automotive-blue to-automotive-purple text-white rounded-full px-6 group"
           >
             <Sparkles className="w-4 h-4 mr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             Get Started
-          </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -112,12 +132,25 @@ const Navbar = () => {
               {link.text}
             </a>
           ))}
-          <Button 
-            className="mt-2 bg-gradient-to-r from-automotive-blue to-automotive-purple hover:from-automotive-purple hover:to-automotive-blue text-white rounded-full transition-all duration-500"
+          <a
+            href={INSURANCE_GPT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground hover:text-automotive-neon py-2 text-center font-medium transition-colors duration-300 flex items-center justify-center"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            <Sparkles className="w-4 h-4 mr-1" />
+            <Shield className="w-4 h-4 mr-1" />
+            Insurance Claims
+          </a>
+          <a
+            href={AUTO_GPT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 bg-gradient-to-r from-automotive-blue to-automotive-purple hover:from-automotive-purple hover:to-automotive-blue text-white rounded-full transition-all duration-500 py-2 text-center"
+          >
+            <Sparkles className="w-4 h-4 mr-1 inline-block" />
             Get Started
-          </Button>
+          </a>
         </div>
       </div>
     </nav>

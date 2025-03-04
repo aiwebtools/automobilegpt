@@ -1,6 +1,10 @@
 
-import { Car, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Car, Facebook, Twitter, Instagram, Linkedin, Youtube, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+// AutoGPT and Insurance GPT URLs
+const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
+const INSURANCE_GPT_URL = "https://chatgpt.com/g/g-ols85Scif-insurance-claims-gpt";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,11 +33,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-5">Services</h3>
             <ul className="space-y-3">
-              <FooterLink text="Car Buying Assistance" href="#" />
-              <FooterLink text="Auto Parts Finder" href="#" />
-              <FooterLink text="Repair Estimates" href="#" />
-              <FooterLink text="Car Value Assessment" href="#" />
-              <FooterLink text="Accident Assistance" href="#" />
+              <FooterLink text="Car Buying Assistance" href={AUTO_GPT_URL} external={true} />
+              <FooterLink text="Auto Parts Finder" href={AUTO_GPT_URL} external={true} />
+              <FooterLink text="Repair Estimates" href={AUTO_GPT_URL} external={true} />
+              <FooterLink text="Car Value Assessment" href={AUTO_GPT_URL} external={true} />
+              <FooterLink text="Insurance Claims" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1 inline" />} />
             </ul>
           </div>
           
@@ -81,12 +85,24 @@ const Footer = () => {
   );
 };
 
-const FooterLink = ({ text, href }: { text: string; href: string }) => (
+const FooterLink = ({ 
+  text, 
+  href, 
+  external = false,
+  icon
+}: { 
+  text: string; 
+  href: string; 
+  external?: boolean;
+  icon?: React.ReactNode;
+}) => (
   <li>
     <a 
       href={href} 
-      className="text-muted-foreground hover:text-automotive-blue transition-colors"
+      className="text-muted-foreground hover:text-automotive-blue transition-colors flex items-center"
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
+      {icon && icon}
       {text}
     </a>
   </li>

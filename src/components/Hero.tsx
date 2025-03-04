@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, Car, Wrench, MapPin, Search, Sparkles, RotateCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,7 +28,8 @@ const Hero = () => {
     };
   }, []);
 
-  // Calculate transform values based on mouse position
+  const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
+
   const calcTransform = (factor = 15) => {
     const x = (mousePosition.x - 0.5) * factor;
     const y = (mousePosition.y - 0.5) * factor;
@@ -41,7 +41,6 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 px-4 md:px-0"
     >
-      {/* Background particles */}
       <div className="absolute inset-0 -z-10">
         {Array.from({ length: 20 }).map((_, i) => (
           <div 
@@ -59,7 +58,6 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Decorative Elements */}
       <div className="absolute top-40 right-10 md:right-40 opacity-20 animate-float-car">
         <Car className="w-40 h-40 text-automotive-neon" />
       </div>
@@ -68,7 +66,6 @@ const Hero = () => {
       </div>
       
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-20">
-        {/* Hero Text Content */}
         <div className={cn(
           "w-full lg:w-1/2 space-y-6 transition-all duration-1000 transform",
           isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
@@ -94,12 +91,15 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button 
-              className="interactive-btn bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all group"
+            <a 
+              href={AUTO_GPT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="interactive-btn bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all group inline-flex items-center justify-center"
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            </a>
             <Button 
               variant="outline" 
               className="rounded-full px-8 py-6 text-lg border-automotive-neon/20 text-foreground hover:bg-automotive-neon/5 neon-border animate-pulse-neon"
@@ -110,7 +110,6 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Hero Image/Visual */}
         <div className={cn(
           "w-full lg:w-1/2 transition-all duration-1000 delay-300 transform",
           isLoaded ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
