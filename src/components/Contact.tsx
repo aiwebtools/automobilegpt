@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Phone, Mail, Send } from "lucide-react";
+import { Phone, Mail, Send, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -57,22 +57,12 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="glass-dark rounded-xl p-6 mt-8">
-                  <h4 className="font-semibold mb-3 text-foreground">Business Hours</h4>
-                  <div className="space-y-2 text-muted-foreground">
-                    <div className="flex justify-between">
-                      <span>Monday - Friday:</span>
-                      <span>9:00 AM - 6:00 PM EST</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday:</span>
-                      <span>10:00 AM - 4:00 PM EST</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday:</span>
-                      <span>Closed</span>
-                    </div>
+                <div className="glass-dark rounded-xl p-8 mt-8 text-center bg-gradient-to-br from-black/60 to-automotive-blue/20 border border-automotive-blue/20 shadow-[0_0_15px_rgba(10,132,255,0.3)]">
+                  <div className="bg-automotive-blue/20 p-3 rounded-full inline-flex items-center justify-center mb-4">
+                    <Clock className="h-6 w-6 text-automotive-neon animate-pulse" style={{ animationDuration: '3s' }} />
                   </div>
+                  <h4 className="text-xl font-semibold mb-3 text-foreground text-glow">24/7 AI Assistance</h4>
+                  <p className="text-xl text-automotive-neon font-medium neon-text">at your fingertips</p>
                 </div>
               </div>
             </div>
