@@ -33,7 +33,7 @@ const VideoSection = () => {
         >
           <div className="aspect-video relative">
             <iframe 
-              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+              src={`https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&mute=0&hd=1&vq=hd1080`}
               title="Automobile GPT Demo"
               className="absolute inset-0 w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
