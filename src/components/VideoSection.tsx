@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { AnimateOnScroll } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
@@ -43,10 +42,14 @@ const VideoSection = () => {
           
           <div className="bg-black/80 p-4 border-t border-white/5">
             <div className="flex justify-between items-center">
-              <div>
-                <h4 className="font-medium text-foreground">How to Use Automobile GPT</h4>
-                <p className="text-sm text-muted-foreground">Published: June 10, 2023</p>
-              </div>
+              <a 
+                href="https://aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-foreground hover:text-automotive-blue transition-colors"
+              >
+                Powered by AiWebTools.Ai
+              </a>
               <div className="flex items-center space-x-2 text-sm">
                 <span className="text-muted-foreground">4:32</span>
               </div>
