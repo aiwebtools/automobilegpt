@@ -9,6 +9,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollBubble from "@/components/ScrollBubble";
 
+const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
+
 const Index = () => {
   // Enable smooth scrolling behavior for anchor links
   useEffect(() => {
@@ -73,7 +75,7 @@ const Index = () => {
       <Footer />
       <ScrollBubble 
         threshold={300} 
-        url="https://automobilegpt.ai" 
+        url={AUTO_GPT_URL} 
         text="TRY AutoMobile GPT" 
       />
     </div>

@@ -5,13 +5,13 @@ import { cn } from '@/lib/utils';
 
 interface ScrollBubbleProps {
   threshold?: number;
-  url: string;
-  text: string;
+  url?: string;
+  text?: string;
 }
 
 const ScrollBubble = ({ 
   threshold = 300, 
-  url = "https://automobilegpt.ai",
+  url = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt",
   text = "TRY AutoMobile GPT"
 }: ScrollBubbleProps) => {
   const [isVisible, setIsVisible] = useState(false);
