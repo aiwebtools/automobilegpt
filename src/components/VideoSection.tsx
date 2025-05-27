@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { AnimateOnScroll } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
@@ -7,7 +6,7 @@ const VideoSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasBeenInView, setHasBeenInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const videoId = "2P3-fOXiyAo";
+  const videoId = "iZ-1iiOZMQ0";
   
   useEffect(() => {
     setIsLoaded(true);
