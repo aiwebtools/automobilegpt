@@ -6,7 +6,7 @@ const VideoSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasBeenInView, setHasBeenInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const videoId = "iZ-1iiOZMQ0";
+  const videoId = "f_4aFnL-mk8";
   
   useEffect(() => {
     setIsLoaded(true);
