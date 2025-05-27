@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -10,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollBubble from "@/components/ScrollBubble";
 import DisclaimerPopup from "@/components/DisclaimerPopup";
+import PricingSection from "@/components/PricingSection";
 
 const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
 
@@ -72,6 +72,7 @@ const Index = () => {
         <Features />
         <HowItWorks />
         <Services />
+        <PricingSection />
         <Contact />
       </main>
       <Footer />

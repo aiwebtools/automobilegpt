@@ -1,7 +1,7 @@
 
 import { AnimateOnScroll } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { Car } from "lucide-react";
+import { Car, CheckCircle } from "lucide-react";
 
 interface ServicesCTAProps {
   url: string;
@@ -14,18 +14,24 @@ export const ServicesCTA = ({ url }: ServicesCTAProps) => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="flex-1">
             <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
-              <p className="text-automotive-blue font-medium">Get Started Today</p>
+              <p className="text-automotive-blue font-medium flex items-center">
+                <CheckCircle className="w-4 h-4 mr-1" />
+                100% Free to Start
+              </p>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-glow">Ready to find your car solution?</h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-4">
               Try Automobile GPT now and experience the future of automotive assistance. Our AI will help you 
               make smarter car decisions with accurate information and personalized recommendations.
+            </p>
+            <p className="text-automotive-blue font-medium mb-6">
+              Free with ChatGPT membership • No additional costs • Start immediately
             </p>
             <Button 
               className="bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-8 py-6 interactive-btn"
               onClick={() => window.open(url, "_blank")}
             >
-              Start Your Assessment
+              Start Your Free Assessment
             </Button>
           </div>
           <div className="w-full md:w-1/3 flex-shrink-0">

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { ArrowRight, Sparkles, RotateCw } from "lucide-react";
+import { ArrowRight, Sparkles, RotateCw, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeroContentProps {
@@ -34,6 +34,17 @@ const HeroContent = ({ isLoaded }: HeroContentProps) => {
         Find the best car deals, auto parts, and repair estimates—all in one place,
         powered by advanced AI technology tailored to your location.
       </p>
+
+      {/* Free Pricing Banner */}
+      <div className="glass-dark rounded-xl p-4 border border-automotive-blue/30 bg-gradient-to-r from-automotive-blue/10 to-automotive-purple/10">
+        <div className="flex items-center space-x-2 mb-2">
+          <CheckCircle className="w-5 h-5 text-automotive-blue" />
+          <span className="text-automotive-blue font-semibold">100% FREE to Use</span>
+        </div>
+        <p className="text-sm text-muted-foreground">
+          Free with ChatGPT membership • Some usage limits apply for free users
+        </p>
+      </div>
       
       <div className="flex flex-col sm:flex-row gap-4 pt-4">
         <a 
@@ -42,7 +53,7 @@ const HeroContent = ({ isLoaded }: HeroContentProps) => {
           rel="noopener noreferrer"
           className="interactive-btn bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all group inline-flex items-center justify-center"
         >
-          Get Started
+          Get Started Free
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
         </a>
         <a 
