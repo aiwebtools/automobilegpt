@@ -1,4 +1,3 @@
-
 import { Car, Heart, Instagram, Youtube, Shield, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -33,6 +32,14 @@ const Footer = () => {
   return (
     <footer className="bg-black/95 pt-12 pb-8 px-4 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
+        {/* Disclaimer Notice */}
+        <div className="bg-automotive-blue/10 border border-automotive-blue/20 rounded-lg p-4 mb-8">
+          <p className="text-sm text-muted-foreground text-center">
+            <span className="font-medium text-automotive-blue">Disclaimer:</span> This tool is provided for informational, educational, and research purposes only. 
+            Always consult with qualified professionals for specific automotive decisions and verify all information independently.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Company column */}
           <div>
@@ -128,12 +135,12 @@ const Footer = () => {
               Privacy Policy
             </a>
             <a 
-              href="https://aiwebtools.ai/terms-of-services" 
+              href="https://aiwebtools.lovable.app/disclaimers" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-automotive-blue transition-colors font-medium"
             >
-              Terms of Service
+              Disclaimers & Terms
             </a>
           </div>
         </div>
