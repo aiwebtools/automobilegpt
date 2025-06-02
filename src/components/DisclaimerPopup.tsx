@@ -32,44 +32,53 @@ const DisclaimerPopup = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in">
-      <div className="relative w-full max-w-md p-6 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-white/10 mx-4 overflow-hidden">
-        <div className="absolute -top-10 -left-10 w-40 h-40 bg-automotive-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-automotive-purple/20 rounded-full blur-3xl"></div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md animate-in">
+      <div className="relative w-full max-w-lg p-8 bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl shadow-2xl border-2 border-green-400/50 mx-4 overflow-hidden animate-scale-in">
+        {/* Glowing border effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 opacity-75 blur-sm -z-10"></div>
+        <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
         
-        <div className="absolute top-4 right-4">
+        {/* Animated background elements */}
+        <div className="absolute -top-12 -left-12 w-48 h-48 bg-green-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        
+        <div className="absolute top-4 right-4 z-10">
           <button 
             onClick={() => setIsOpen(false)}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
         
-        <div className="flex items-start gap-3 mb-4 relative z-10">
-          <div className="p-2 bg-automotive-blue/10 rounded-full flex-shrink-0">
-            <Info className="w-6 h-6 text-automotive-blue" />
+        <div className="relative z-10">
+          <div className="flex items-start gap-4 mb-6">
+            <div className="p-3 bg-green-500/20 border border-green-400/30 rounded-full flex-shrink-0 shadow-lg">
+              <Info className="w-7 h-7 text-green-400" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
+                <span className="bg-gradient-to-r from-green-400 via-emerald-300 to-green-500 bg-clip-text text-transparent">
+                  Important Notice
+                </span>
+              </h3>
+              <p className="text-sm text-gray-300 mb-4 leading-relaxed font-medium">
+                Welcome to <span className="font-bold text-green-400">Automobile GPT</span>. By using this service, you acknowledge and agree to our Terms of Service and Privacy Policy. All information provided is for general guidance only.
+              </p>
+              <p className="text-sm text-gray-300 mb-6 leading-relaxed font-medium">
+                We are not responsible for decisions made based on recommendations from this tool. Always consult with automotive professionals for critical decisions.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold text-white mb-3 tracking-tight bg-gradient-to-r from-automotive-blue via-white to-automotive-purple bg-clip-text text-transparent">
-              Important Notice
-            </h3>
-            <p className="text-sm text-gray-300 mb-3 leading-relaxed font-medium">
-              Welcome to <span className="font-bold text-automotive-blue">Automobile GPT</span>. By using this service, you acknowledge and agree to our Terms of Service and Privacy Policy. All information provided is for general guidance only.
-            </p>
-            <p className="text-sm text-gray-300 mb-4 leading-relaxed font-medium">
-              We are not responsible for decisions made based on recommendations from this tool. Always consult with automotive professionals for critical decisions.
-            </p>
+          
+          <div className="flex justify-center">
+            <Button 
+              onClick={handleAccept}
+              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold tracking-wide px-8 py-3 text-lg rounded-xl shadow-lg hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 border border-green-400/50"
+            >
+              I AGREE
+            </Button>
           </div>
-        </div>
-        
-        <div className="flex justify-end relative z-10">
-          <Button 
-            onClick={handleAccept}
-            className="bg-gradient-to-r from-automotive-blue to-automotive-purple hover:opacity-90 font-bold tracking-wide px-6 py-2"
-          >
-            I AGREE
-          </Button>
         </div>
       </div>
     </div>
