@@ -11,13 +11,14 @@ const Features = () => {
         <AnimateOnScroll animation="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-3">
-              <p className="text-automotive-blue font-medium">Why Choose Automobile GPT</p>
+              <p className="text-automotive-blue font-medium">Why Choose AI Web Tools</p>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4 text-glow">
-              Powerful Features for Every Car Need
+              Advanced Free AI Tools for Smart Car Decisions
             </h2>
             <p className="text-muted-foreground text-lg">
-              We combine advanced AI technology with real-time market data to provide the most accurate and helpful automotive information.
+              We combine cutting-edge <strong>artificial intelligence technology</strong> with real-time market data to provide the most accurate and helpful automotive information. 
+              Our <strong>free AI tools</strong> are trusted by automotive professionals and car enthusiasts worldwide.
             </p>
           </div>
         </AnimateOnScroll>
@@ -25,40 +26,40 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           <FeatureCard
             icon={<Search className="h-6 w-6 text-white" />}
-            title="Multi-Source Web Search"
-            description="Automatic real-time search across multiple platforms to find the most accurate prices for cars and parts."
+            title="AI-Powered Multi-Source Search"
+            description="Automatic real-time AI search across multiple platforms to find the most accurate prices for cars and parts using advanced machine learning algorithms."
             iconBg="bg-automotive-blue"
             delay={100}
           />
           
           <FeatureCard
             icon={<ShoppingCart className="h-6 w-6 text-white" />}
-            title="Direct Purchase Links"
-            description="Get actual URLs to purchase the parts and cars you need, saving you time and money."
+            title="Smart Purchase Intelligence"
+            description="Get actual URLs to purchase the parts and cars you need with AI-powered price comparison, saving you time and money with intelligent recommendations."
             iconBg="bg-automotive-blue"
             delay={200}
           />
           
           <FeatureCard
             icon={<FileText className="h-6 w-6 text-white" />}
-            title="Professional Reports"
-            description="Generate industry-standard reports for insurance claims, repairs, or car valuations."
+            title="Professional AI Reports"
+            description="Generate industry-standard reports for insurance claims, repairs, or car valuations using our advanced AI algorithms and automotive expertise."
             iconBg="bg-automotive-blue"
             delay={300}
           />
           
           <FeatureCard
             icon={<Youtube className="h-6 w-6 text-white" />}
-            title="DIY Repair Videos"
-            description="Access embedded YouTube tutorials to guide you through DIY car repairs and maintenance."
+            title="AI-Curated DIY Videos"
+            description="Access AI-selected YouTube tutorials to guide you through DIY car repairs and maintenance with smart content recommendations."
             iconBg="bg-automotive-blue"
             delay={400}
           />
           
           <FeatureCard
             icon={<CheckCircle2 className="h-6 w-6 text-white" />}
-            title="Accurate Cost Calculations"
-            description="Precise breakdown of parts, labor, and total repair costs with professional estimation."
+            title="Precision AI Cost Analysis"
+            description="Precise breakdown of parts, labor, and total repair costs with professional AI estimation algorithms used by automotive experts."
             iconBg="bg-automotive-blue"
             delay={500}
           />
@@ -147,27 +148,27 @@ const PremiumFeatureCard = ({ delay = 0 }: { delay?: number }) => {
               <Car className="h-6 w-6 text-white" />
             </div>
             <div className="bg-black/30 backdrop-blur-sm px-3 py-0.5 rounded-full border border-white/20">
-              <span className="text-sm font-medium">Premium</span>
+              <span className="text-sm font-medium">AI Premium</span>
             </div>
           </div>
           
-          <h3 className="text-xl font-semibold mb-2">Complete Car Assessment</h3>
+          <h3 className="text-xl font-semibold mb-2">Complete AI Car Assessment</h3>
           <p className="text-white/80 flex-grow">
-            Get comprehensive analysis of whether your car is worth repairing or if it's considered totaled.
+            Get comprehensive AI-powered analysis of whether your car is worth repairing or if it's considered totaled using advanced automotive algorithms.
           </p>
           
           <div className="mt-4 pt-4 border-t border-white/20">
             <div className="flex items-center">
               <CheckCircle2 className="h-4 w-4 mr-2 text-white" />
-              <span className="text-sm">Parts & labor breakdown</span>
+              <span className="text-sm">AI parts & labor breakdown</span>
             </div>
             <div className="flex items-center mt-1">
               <CheckCircle2 className="h-4 w-4 mr-2 text-white" />
-              <span className="text-sm">Market value comparison</span>
+              <span className="text-sm">Smart market value comparison</span>
             </div>
             <div className="flex items-center mt-1">
               <CheckCircle2 className="h-4 w-4 mr-2 text-white" />
-              <span className="text-sm">Detailed report included</span>
+              <span className="text-sm">Professional AI report included</span>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 import { Car, Heart, Instagram, Youtube, Shield, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -32,39 +33,39 @@ const Footer = () => {
   return (
     <footer className="bg-black/95 pt-12 pb-8 px-4 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
-        {/* Disclaimer Notice */}
+        {/* Enhanced SEO Disclaimer Notice */}
         <div className="bg-automotive-blue/10 border border-automotive-blue/20 rounded-lg p-4 mb-8">
           <p className="text-sm text-muted-foreground text-center">
-            <span className="font-medium text-automotive-blue">Disclaimer:</span> This tool is provided for informational, educational, and research purposes only. 
-            Always consult with qualified professionals for specific automotive decisions and verify all information independently.
+            <span className="font-medium text-automotive-blue">Important Disclaimer:</span> AI Web Tools and our AI-powered solutions including Automobile GPT are provided for informational, educational, and research purposes only. 
+            Always consult with qualified automotive professionals for specific car decisions and verify all AI-generated information independently. Our free AI tools are designed to assist but not replace professional automotive expertise.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-          {/* Company column */}
+          {/* Enhanced Company column with SEO keywords */}
           <div>
             <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 mb-5 hover:opacity-90 transition-opacity">
               <Car className="h-7 w-7 text-automotive-blue" />
-              <span className="font-semibold text-xl tracking-tight text-foreground">Automobile GPT</span>
+              <span className="font-semibold text-xl tracking-tight text-foreground">AI Web Tools</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-xs text-sm">
-              Your AI-powered automotive expert for finding car deals, parts, and repair estimates tailored to your location.
+              Leading provider of <strong>free AI tools</strong> including Automobile GPT - your AI-powered automotive expert for finding car deals, auto parts, and repair estimates tailored to your location. Trusted by automotive professionals worldwide.
             </p>
             <div className="flex space-x-3 mb-6">
               <SocialLink 
                 icon={<Instagram className="h-5 w-5" />} 
                 href="https://www.instagram.com/aiwebtools.ai" 
-                label="Instagram" 
+                label="AI Web Tools Instagram - Follow for free AI tools updates" 
               />
               <SocialLink 
                 icon={<Youtube className="h-5 w-5" />} 
                 href="https://www.youtube.com/@AIToolsUniversity" 
-                label="YouTube" 
+                label="AI Tools University YouTube - Learn about AI web tools" 
               />
               <SocialLink 
                 icon={<TikTokIcon />} 
                 href="https://www.tiktok.com/@aiwebtools/" 
-                label="TikTok" 
+                label="AI Web Tools TikTok - Quick AI tools tips and demos" 
               />
             </div>
             <a 
@@ -72,15 +73,16 @@ const Footer = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center space-x-2 bg-automotive-blue/90 hover:bg-automotive-blue text-white font-semibold py-2.5 px-4 rounded-md transition-colors"
+              aria-label="Explore more free AI tools at AI Web Tools"
             >
-              <span>More AI Tools</span>
+              <span>More Free AI Tools</span>
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>
           
-          {/* Services column */}
+          {/* Enhanced Services column */}
           <div>
-            <h3 className="font-medium text-lg mb-4 text-foreground">Services</h3>
+            <h3 className="font-medium text-lg mb-4 text-foreground">Free AI Tools & Services</h3>
             <ul className="space-y-3.5">
               <li>
                 <a 
@@ -88,23 +90,27 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-automotive-blue/90 hover:bg-automotive-blue text-white font-semibold py-2.5 px-4 rounded-md transition-colors"
+                  aria-label="Try Automobile GPT - Free AI tool for automotive solutions"
                 >
                   <Car className="h-4 w-4" />
-                  <span>Automobile GPT</span>
+                  <span>Automobile GPT (Free)</span>
                 </a>
               </li>
-              <FooterLink text="Insurance Claims GPT" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1.5 inline" />} />
+              <FooterLink text="Insurance Claims AI GPT" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1.5 inline" />} />
+              <li className="text-sm text-muted-foreground">
+                <strong>Keywords:</strong> AI tools, free AI tools, automotive AI, car deals AI, auto repair estimates, artificial intelligence solutions
+              </li>
             </ul>
           </div>
           
-          {/* Support column */}
+          {/* Enhanced Company column with SEO focus */}
           <div>
-            <h3 className="font-medium text-lg mb-4 text-foreground">Company</h3>
+            <h3 className="font-medium text-lg mb-4 text-foreground">About AI Web Tools</h3>
             <ul className="space-y-3.5">
-              <FooterLink text="About Us" href={AIWEBTOOLS_URL} external={true} />
-              <FooterLink text="Contact Us" href="#contact" />
+              <FooterLink text="About Our AI Tools Platform" href={AIWEBTOOLS_URL} external={true} />
+              <FooterLink text="Contact AI Web Tools Team" href="#contact" />
               <li className="mt-6 text-sm text-muted-foreground flex items-center">
-                <span>Made with</span>
+                <span>Proudly made with</span>
                 <Heart className="h-4 w-4 mx-1 text-automotive-red fill-automotive-red" />
                 <span>by</span>
                 <a 
@@ -112,18 +118,22 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer" 
                   className="ml-1 text-automotive-blue hover:underline"
+                  aria-label="Visit AI Web Tools - Free AI Tools Platform"
                 >
-                  AIWebTools.AI
+                  AI Web Tools Team
                 </a>
+              </li>
+              <li className="text-xs text-muted-foreground">
+                🏆 #1 Free AI Tools Platform for Automotive Solutions
               </li>
             </ul>
           </div>
         </div>
         
-        {/* Footer bottom */}
+        {/* Enhanced Footer bottom with SEO keywords */}
         <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-muted-foreground mb-4 md:mb-0">
-            © {currentYear} AI Web Tools LLC. All rights reserved.
+            © {currentYear} AI Web Tools LLC. All rights reserved. Leading provider of free AI tools and automotive AI solutions.
           </p>
           <div className="flex space-x-5">
             <a 
@@ -131,6 +141,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-automotive-blue transition-colors font-medium"
+              aria-label="Privacy Policy for AI Web Tools users"
             >
               Privacy Policy
             </a>
@@ -139,8 +150,9 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-automotive-blue transition-colors font-medium"
+              aria-label="Terms of Service and Disclaimers for AI Web Tools"
             >
-              Disclaimers & Terms
+              Terms & Disclaimers
             </a>
           </div>
         </div>

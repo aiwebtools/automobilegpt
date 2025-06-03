@@ -19,30 +19,46 @@ const HeroContent = ({ isLoaded }: HeroContentProps) => {
         <div className="inline-block bg-automotive-blue/20 px-3 py-1 rounded-full mb-2 md:mb-3">
           <p className="text-automotive-blue text-sm font-medium flex items-center">
             <Sparkles className="w-4 h-4 mr-1 animate-pulse" />
-            Your AI-Powered Automotive Expert
+            #1 Free AI Tools Platform
           </p>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-balance">
-          <span className="text-automotive-blue neon-text">Automobile GPT</span>
+          <span className="text-automotive-blue neon-text">AI Web Tools</span>
         </h1>
         <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-foreground text-balance text-glow">
-          Smarter Car Decisions
+          Free AI Tools for Everyone
         </h2>
       </div>
       
       <p className="text-base sm:text-lg md:text-xl max-w-xl text-balance text-muted-foreground">
-        Find the best car deals, auto parts, and repair estimates—all in one place,
-        powered by advanced AI technology tailored to your location.
+        Discover powerful free AI tools including <strong>Automobile GPT</strong> for car deals, auto parts, and repair estimates. 
+        Advanced artificial intelligence solutions designed for professionals and everyday users.
       </p>
+
+      {/* Enhanced SEO-focused benefits */}
+      <div className="space-y-2">
+        <div className="flex items-center text-sm text-muted-foreground">
+          <CheckCircle className="w-4 h-4 text-automotive-blue mr-2" />
+          <span><strong>100% Free AI Tools</strong> - No hidden costs or subscriptions</span>
+        </div>
+        <div className="flex items-center text-sm text-muted-foreground">
+          <CheckCircle className="w-4 h-4 text-automotive-blue mr-2" />
+          <span><strong>Instant AI Results</strong> - Get automotive insights in seconds</span>
+        </div>
+        <div className="flex items-center text-sm text-muted-foreground">
+          <CheckCircle className="w-4 h-4 text-automotive-blue mr-2" />
+          <span><strong>Professional Grade</strong> - Industry-standard AI solutions</span>
+        </div>
+      </div>
 
       {/* Free Pricing Banner */}
       <div className="glass-dark rounded-xl p-4 border border-automotive-blue/30 bg-gradient-to-r from-automotive-blue/10 to-automotive-purple/10">
         <div className="flex items-center space-x-2 mb-2">
           <CheckCircle className="w-5 h-5 text-automotive-blue" />
-          <span className="text-automotive-blue font-semibold">100% FREE to Use</span>
+          <span className="text-automotive-blue font-semibold">100% FREE AI Tools Platform</span>
         </div>
         <p className="text-sm text-muted-foreground">
-          Free with ChatGPT membership • Some usage limits apply for free users
+          Free with ChatGPT membership • Leading AI web tools provider • Trusted by thousands
         </p>
       </div>
       
@@ -52,16 +68,18 @@ const HeroContent = ({ isLoaded }: HeroContentProps) => {
           target="_blank"
           rel="noopener noreferrer"
           className="interactive-btn bg-automotive-blue hover:bg-automotive-blue/90 text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all group inline-flex items-center justify-center"
+          aria-label="Try Automobile GPT - Free AI tool for car deals and auto repair estimates"
         >
-          Get Started Free
+          Try Free AI Tools
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
         </a>
         <a 
           href="#features"
           className="rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg border-automotive-neon/20 text-foreground hover:bg-automotive-neon/5 neon-border animate-pulse-neon inline-flex items-center justify-center"
+          aria-label="Learn more about AI Web Tools features and capabilities"
         >
           <RotateCw className="w-5 h-5 mr-2 animate-spin" style={{ animationDuration: '8s' }} />
-          Learn More
+          Explore AI Tools
         </a>
       </div>
     </div>
