@@ -36,8 +36,8 @@ const Footer = () => {
         {/* Enhanced SEO Disclaimer Notice */}
         <div className="bg-automotive-blue/10 border border-automotive-blue/20 rounded-lg p-4 mb-8">
           <p className="text-sm text-muted-foreground text-center">
-            <span className="font-medium text-automotive-blue">Important Disclaimer:</span> AI Web Tools and our AI-powered solutions including Automobile GPT are provided for informational, educational, and research purposes only. 
-            Always consult with qualified automotive professionals for specific car decisions and verify all AI-generated information independently. Our free AI tools are designed to assist but not replace professional automotive expertise.
+            <span className="font-medium text-automotive-blue">Important Disclaimer:</span> Automobile GPT is provided for informational, educational, and research purposes only. 
+            Always consult with qualified automotive professionals for specific car decisions and verify all AI-generated information independently. This AI assistant is designed to assist but not replace professional automotive expertise.
           </p>
         </div>
 
@@ -46,10 +46,10 @@ const Footer = () => {
           <div>
             <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 mb-5 hover:opacity-90 transition-opacity">
               <Car className="h-7 w-7 text-automotive-blue" />
-              <span className="font-semibold text-xl tracking-tight text-foreground">AI Web Tools</span>
+              <span className="font-semibold text-xl tracking-tight text-foreground">Automobile GPT</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-xs text-sm">
-              Leading provider of <strong>free AI tools</strong> including Automobile GPT - your AI-powered automotive expert for finding car deals, auto parts, and repair estimates tailored to your location. Trusted by automotive professionals worldwide.
+              Expert AI-powered automotive assistant for finding car deals, maintenance guidance, and repair estimates tailored to your location. Trusted by automotive enthusiasts and professionals alike.
             </p>
             <div className="flex space-x-3 mb-6">
               <SocialLink 
@@ -75,14 +75,14 @@ const Footer = () => {
               className="inline-flex items-center space-x-2 bg-automotive-blue/90 hover:bg-automotive-blue text-white font-semibold py-2.5 px-4 rounded-md transition-colors"
               aria-label="Explore more free AI tools at AI Web Tools"
             >
-              <span>More Free AI Tools</span>
+              <span>Visit AI Web Tools</span>
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>
           
           {/* Enhanced Services column */}
           <div>
-            <h3 className="font-medium text-lg mb-4 text-foreground">Free AI Tools & Services</h3>
+            <h3 className="font-medium text-lg mb-4 text-foreground">Automotive AI Tools</h3>
             <ul className="space-y-3.5">
               <li>
                 <a 
@@ -90,25 +90,25 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-automotive-blue/90 hover:bg-automotive-blue text-white font-semibold py-2.5 px-4 rounded-md transition-colors"
-                  aria-label="Try Automobile GPT - Free AI tool for automotive solutions"
+                  aria-label="Try Automobile GPT - AI-powered automotive assistant"
                 >
                   <Car className="h-4 w-4" />
-                  <span>Automobile GPT (Free)</span>
+                  <span>Automobile GPT</span>
                 </a>
               </li>
               <FooterLink text="Insurance Claims AI GPT" href={INSURANCE_GPT_URL} external={true} icon={<Shield className="h-4 w-4 mr-1.5 inline" />} />
               <li className="text-sm text-muted-foreground">
-                <strong>Keywords:</strong> AI tools, free AI tools, automotive AI, car deals AI, auto repair estimates, artificial intelligence solutions
+                <strong>Capabilities:</strong> Car buying assistance, maintenance guidance, repair cost estimation
               </li>
             </ul>
           </div>
           
           {/* Enhanced Company column with SEO focus */}
           <div>
-            <h3 className="font-medium text-lg mb-4 text-foreground">About AI Web Tools</h3>
+            <h3 className="font-medium text-lg mb-4 text-foreground">About Our Platform</h3>
             <ul className="space-y-3.5">
-              <FooterLink text="About Our AI Tools Platform" href={AIWEBTOOLS_URL} external={true} />
-              <FooterLink text="Contact AI Web Tools Team" href="#contact" />
+              <FooterLink text="About Automobile GPT" href={AIWEBTOOLS_URL} external={true} />
+              <FooterLink text="Contact Us" href="#contact" />
               <li className="mt-6 text-sm text-muted-foreground flex items-center">
                 <span>Proudly made with</span>
                 <Heart className="h-4 w-4 mx-1 text-automotive-red fill-automotive-red" />
@@ -118,13 +118,13 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer" 
                   className="ml-1 text-automotive-blue hover:underline"
-                  aria-label="Visit AI Web Tools - Free AI Tools Platform"
+                  aria-label="Visit AI Web Tools - Creators of Automobile GPT"
                 >
                   AI Web Tools Team
                 </a>
               </li>
               <li className="text-xs text-muted-foreground">
-                🏆 #1 Free AI Tools Platform for Automotive Solutions
+                Your AI-powered automotive assistant
               </li>
             </ul>
           </div>
@@ -133,7 +133,7 @@ const Footer = () => {
         {/* Enhanced Footer bottom with SEO keywords */}
         <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-muted-foreground mb-4 md:mb-0">
-            © {currentYear} AI Web Tools LLC. All rights reserved. Leading provider of free AI tools and automotive AI solutions.
+            © {currentYear} AI Web Tools LLC. All rights reserved. Creators of Automobile GPT - AI-powered automotive assistant.
           </p>
           <div className="flex space-x-5">
             <a 

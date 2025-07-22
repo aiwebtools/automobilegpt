@@ -53,8 +53,6 @@ const Navbar = () => {
   const navLinks = [
     { text: "More AI Tools", href: AIWEBTOOLS_URL, external: true },
     { text: "How It Works", href: "#how-it-works" },
-    { text: "Services", href: "#services" },
-    { text: "Contact", href: "#contact" },
   ];
 
   return (
