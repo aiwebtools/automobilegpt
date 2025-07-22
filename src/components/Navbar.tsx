@@ -129,10 +129,28 @@ const Navbar = () => {
             href={AUTO_GPT_URL} 
             target="_blank"
             rel="noopener noreferrer"
-            className="interactive-btn bg-gradient-to-r from-automotive-blue to-automotive-purple text-white rounded-full px-6 group"
+            className="interactive-btn bg-gradient-to-r from-automotive-blue to-automotive-purple text-white rounded-full px-6 py-3 font-medium shadow-[0_0_15px_rgba(0,255,187,0.5)] hover:shadow-[0_0_25px_rgba(0,255,187,0.7)] transition-all duration-300 border border-automotive-neon/30 group flex items-center justify-center"
+            aria-label="Access Automobile GPT now"
+            onClick={(e) => {
+              // Add a ripple effect
+              const button = e.currentTarget;
+              const ripple = document.createElement('span');
+              const rect = button.getBoundingClientRect();
+              const size = Math.max(rect.width, rect.height);
+              const x = e.clientX - rect.left - size / 2;
+              const y = e.clientY - rect.top - size / 2;
+              
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `${x}px`;
+              ripple.style.top = `${y}px`;
+              ripple.classList.add('ripple');
+              
+              button.appendChild(ripple);
+              setTimeout(() => ripple.remove(), 600);
+            }}
           >
-            <Sparkles className="w-4 h-4 mr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            ACCESS AUTOMOBILE GPT
+            <Sparkles className="w-5 h-5 mr-2 opacity-80 animate-pulse" />
+            <span className="tracking-wide">ACCESS AUTOMOBILE GPT</span>
           </a>
         </div>
 
@@ -199,10 +217,26 @@ const Navbar = () => {
             href={AUTO_GPT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-automotive-blue to-automotive-purple hover:from-automotive-purple hover:to-automotive-blue text-white rounded-lg transition-all duration-300 p-3 text-center font-medium active:scale-95 flex items-center justify-center gap-2"
+            className="bg-gradient-to-r from-automotive-blue to-automotive-purple text-white rounded-lg transition-all duration-300 p-4 text-center font-medium active:scale-95 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,255,187,0.5)] hover:shadow-[0_0_25px_rgba(0,255,187,0.7)] border border-automotive-neon/30 relative overflow-hidden"
+            onClick={(e) => {
+              // Add a touch ripple effect
+              const button = e.currentTarget;
+              const ripple = document.createElement('span');
+              const rect = button.getBoundingClientRect();
+              
+              // For mobile, center the ripple
+              const size = Math.max(rect.width, rect.height) * 1.5;
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `calc(50% - ${size/2}px)`;
+              ripple.style.top = `calc(50% - ${size/2}px)`;
+              ripple.classList.add('ripple');
+              
+              button.appendChild(ripple);
+              setTimeout(() => ripple.remove(), 600);
+            }}
           >
-            <Sparkles className="w-5 h-5" />
-            ACCESS AUTOMOBILE GPT
+            <Sparkles className="w-5 h-5 animate-pulse" />
+            <span className="tracking-wide">ACCESS AUTOMOBILE GPT</span>
           </a>
         </div>
       </div>
