@@ -132,7 +132,7 @@ const Navbar = () => {
             className="interactive-btn bg-gradient-to-r from-automotive-blue to-automotive-purple text-white rounded-full px-6 group"
           >
             <Sparkles className="w-4 h-4 mr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            Get Started
+            ACCESS AUTOMOBILE GPT
           </a>
         </div>
 
@@ -202,7 +202,7 @@ const Navbar = () => {
             className="bg-gradient-to-r from-automotive-blue to-automotive-purple hover:from-automotive-purple hover:to-automotive-blue text-white rounded-lg transition-all duration-300 p-3 text-center font-medium active:scale-95 flex items-center justify-center gap-2"
           >
             <Sparkles className="w-5 h-5" />
-            Get Started
+            ACCESS AUTOMOBILE GPT
           </a>
         </div>
       </div>
