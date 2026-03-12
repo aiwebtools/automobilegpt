@@ -84,7 +84,7 @@ const VideoSection = () => {
           <div className="bg-black/80 p-3 sm:p-4 border-t border-white/5">
             <div className="flex justify-between items-center">
               <a 
-                href="https://aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-foreground hover:text-automotive-blue transition-colors text-sm sm:text-base"
