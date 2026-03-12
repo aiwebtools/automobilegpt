@@ -11,7 +11,7 @@ const Navbar = () => {
   // AutoGPT and Insurance GPT URLs
   const AUTO_GPT_URL = "https://chatgpt.com/g/g-iZOG15keP-automobile-gpt";
   const INSURANCE_GPT_URL = "https://insuranceclaimsgpt.lovable.app/";
-  const AIWEBTOOLS_URL = "https://aiwebtools.ai";
+  const AIWEBTOOLS_URL = "https://aiwebtools.lovable.app/?via=aiwebtools";
 
   useEffect(() => {
     const handleScroll = () => {
